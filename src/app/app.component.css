@@ -1,0 +1,53 @@
+.container {
+    display: flex; 
+    flex-direction: row;
+
+    justify-content:space-around;
+  }
+
+  .boxitem{
+      height: 30vh;
+      width:40vw;
+  }
+  #title{
+      text-align: center;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: bold;
+      position:relative;
+      top:1vh;
+  }
+  mat-form-field{
+    width:40vw;
+
+  }
+  h2{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+
+  }
+  #btncalcul{
+      position:relative;
+      top:1vh;
+  }
+  #btnreset{
+    position:relative;
+    top:1vh;
+    margin-right:0.5vw;
+}
+  
+  #result{
+    position:fixed;
+    top:45vh;
+    left:60vw;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+  }
+  #result:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  #result p{
+    padding:8px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+  }

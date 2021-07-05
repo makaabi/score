@@ -1,0 +1,124 @@
+
+<h2 id="title">  Score concours spécifique d'ingénieurs 2021</h2>
+
+<div class="container">
+
+<div  class="boxitem" id="form1cont">
+  <h2>Score 1</h2>
+
+  <form [formGroup]="this.form"  >
+    <div>
+
+      <mat-radio-group name="age" formControlName="annne_naissance">
+        <mat-label>Année de naissance : </mat-label>
+        <mat-radio-button value="2000" >2000</mat-radio-button>&nbsp;
+        <mat-radio-button value="1999">1999</mat-radio-button>&nbsp;
+        <mat-radio-button value="1998">1998</mat-radio-button>&nbsp;
+        <mat-radio-button value="1997">1997</mat-radio-button>&nbsp;
+      </mat-radio-group>
+    </div>
+    <div>
+      <mat-form-field appearance="legacy">
+        <mat-label>Moyenne bac</mat-label>
+        <input type="number" formControlName="moybac"  matInput placeholder="Placeholder">
+        <mat-hint>sur 20</mat-hint>
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field appearance="legacy">
+        <mat-label>Moyenne générale en 1ére année</mat-label>
+        <input type="number" formControlName="moy1ere" matInput placeholder="Placeholder">
+        <mat-hint>sur 20</mat-hint>
+      </mat-form-field>
+
+    </div>
+    <div>
+      <mat-form-field appearance="legacy">
+        <mat-label>Le rang pour la 1ére année</mat-label>
+        <input type="number" formControlName="rang1ere" matInput placeholder="Placeholder">
+        <mat-hint>Toute la promotion
+        </mat-hint>
+      </mat-form-field>
+
+    </div>
+    <div>
+      <mat-form-field appearance="legacy">
+        <mat-label>Effectif de la promotion</mat-label>
+        <input type="number"  formControlName="effect1ere"  matInput placeholder="Placeholder">
+        <mat-hint>nombre d'élèves de première année
+        </mat-hint>
+      </mat-form-field>
+
+    </div>
+  
+    <div>
+      <mat-form-field appearance="legacy">
+        <mat-label>Moyenne générale en 2eme année</mat-label>
+        <input type="number" formControlName="moy2eme"  matInput placeholder="Placeholder">
+        <mat-hint>sur 20</mat-hint>
+      </mat-form-field>
+
+    </div>
+    <div>
+      <mat-form-field appearance="legacy">
+        <mat-label>Le rang pour la 2eme année</mat-label>
+        <input type="number" formControlName="rang2eme"  matInput placeholder="Placeholder">
+        <mat-hint>Toute la promotion
+        </mat-hint>
+      </mat-form-field>
+
+    </div>
+    <div>
+      <mat-form-field appearance="legacy">
+        <mat-label>Effectif de la promotion</mat-label>
+        <input type="number" formControlName="effect2eme"  matInput placeholder="Placeholder">
+        <mat-hint>nombre d'élèves de deuxième année
+        </mat-hint>
+      </mat-form-field>
+
+    </div>
+
+  </form>
+
+</div>
+  <div class="boxitem" id="form2cont">
+    <h2>Score 2</h2>
+
+    <form [formGroup]="this.form2" (ngSubmit)="onSubmit()"  >
+      <div>
+        <mat-form-field appearance="legacy">
+          <mat-label>La moyenne générale de la matiére principale</mat-label>
+          <input type="number" formControlName="moymatprinc"  matInput placeholder="Placeholder">
+          <mat-hint>sur 20</mat-hint>
+        </mat-form-field>
+      </div>
+  
+      <div>
+        <mat-form-field appearance="legacy">
+          <mat-label>La moyenne générale en français et en anglais</mat-label>
+          <input type="number" formControlName="moyfreng" matInput placeholder="Placeholder">
+          <mat-hint>sur 20</mat-hint>
+        </mat-form-field>
+  
+      </div>
+      <button id="btnreset"  type="button" (click)="resetthings()"mat-raised-button color="basic">Réinitialiser</button>
+
+      <button id="btncalcul" mat-raised-button color="accent">Calculer</button>
+
+     
+
+    
+    
+  
+    </form>
+
+  </div>
+  <div id="result" *ngIf="show">
+<p>Votre Score : <span style="color:blue">{{scoreg.toFixed(2)}}</span></p>
+
+  </div>
+
+  
+  </div>
+  
